@@ -9,7 +9,9 @@ const Users = () => {
     }, [])
     const getUsers =async()=>{
         try {
-            const res = await axios.get("http://127.0.0.1:8000/users")
+            const res = await axios.get(
+              "https://reg-firstreact-2.onrender.com")
+              // "http://127.0.0.1:8000/users"
             setUsers(res.data.users)
         } catch (error) {
             console.log(error)

@@ -34,7 +34,10 @@ const Register = () => {
 
   const handleRegister =async ()=>{
     try {
-      const res= await axios.post( "http://127.0.0.1:8000/register",regData)
+      const res= await axios.post( 
+        "https://reg-firstreact-2.onrender.com"
+        // "http://127.0.0.1:8000/register"
+        ,regData)
       alert(res.data.message)
       navigate("/login")
     } catch (error) {
